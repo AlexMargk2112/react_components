@@ -7,7 +7,10 @@ const meta: Meta<typeof Button> = {
   component: Button,
   argTypes: {
     label: {
-      description: 'The label of the button'
+      description: 'The label of the button.'
+    },
+    theme: {
+      description: 'The UI theme of the button.'
     }
   },
   args: {
@@ -33,7 +36,7 @@ export const Secondary: Story = {
   }
 }
 
-/** Pass `'secondary'` to the the `theme` prop.  */
+/** Pass any React node to the the `icon` prop.  */
 export const WithIcon: Story = {
   args: {
     theme: 'primary'
@@ -46,3 +49,4 @@ export const WithIcon: Story = {
     />
   )
 }
+WithIcon.storyName = 'With Icon Node';
